@@ -1,7 +1,7 @@
 const express=require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-const port = process.PORT || 6000;
+const port = process.PORT || 3000;
 
 var app = express();
 
