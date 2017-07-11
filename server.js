@@ -1,6 +1,7 @@
 const express=require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.PORT || 3000;
 
 var app = express();
 
@@ -28,9 +29,9 @@ app.use((req,res, next) => {
     console.log(log);
 });
 
-// app.use((req,res, next) => {
-//   res.render('maintenance.hbs');
-// });
+  // app.use((req,res, next) => {
+  //   res.render('maintenance.hbs');
+  // });
 app.get('/', (req, res) => {
   //  res.send('<h1>Hello I got u r message: EXPRESS</h1>');
   res.render('home.hbs', {
@@ -46,6 +47,6 @@ app.get('/about', (req, res) => {
 });
 app.use(express.static(__dirname+ '/public'));
 
-app.listen(3000, () => {
-  console.log('Server up on port 3000');
+app.listen(port, () => {
+  console.log(`Server up on port ${port}`);
 });
