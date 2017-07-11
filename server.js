@@ -42,7 +42,13 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     // res.send('About Page')
     res.render('about.hbs', {
-      title: 'HBS Moustach'
+      title: 'About'
+    });
+});
+app.get('/projects', (req, res) => {
+    // res.send('About Page')
+    res.render('projects.hbs', {
+      title: 'Projects'
     });
 });
 app.use(express.static(__dirname+ '/public'));
